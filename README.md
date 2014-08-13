@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node Chat Example
 
 Chat example to showcase how to use `socket.io` with a static `express` server.
@@ -14,3 +15,9 @@ Chat example to showcase how to use `socket.io` with a static `express` server.
 
 Once the server is running, open `http://localhost:3000` in your browser. As you enter your name, watch the Users list
 (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+=======
+angular-test
+============
+
+doing some testing
+>>>>>>> a92e892ac7665d5b6633cb4d7d8c436978aff8ae
