@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="../bower_components/d3/d3.min.js"></script>
+</head>   
+
+
+
+
+<body>
+    
+    
+        <p>sdsd</p>
+        <script>
+            
+       var color = d3.scale.ordinal()
+        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+         
+        canvas =  d3.select('body').append('svg')
+                   .attr('height','500')
+                   .attr('width','500')
+                   .style('border','1px gray solid');
+            
+        var group = canvas.append('g')
+                    .attr('transform','translate(100,100)');
+                    
+        var r = 100;
+        var p = Math.PI*2;
+                    
+        var arc = d3.svg.arc()
+                .innerRadius(r-50)
+                .outerRadius(r)
+                .startAngle(0)
+                .endAngle(p-2);
+        
+        
+        group.append('path')
+        .attr('d',arc);
+            
+            
+        </script>
+        
+    
+    
+    
+    
+</body>
+
+</html>
