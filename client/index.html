@@ -10,6 +10,7 @@
         padding-top: 60px;
       }
     </style>
+    
     <script>
       function ChatController($scope) {
         var socket = io.connect();
@@ -84,7 +85,7 @@
             <form ng-submit="send()">
               <div class="span2"><input type="text" class="input-block-level" ng-model="name" ng-change="setName()" placeholder="Your Name"></div>
               <div class="input-append span7">
-                <input type="text" class="span6" ng-model="text" placeholder="Message">
+                <input type="text" class="span6" ng-model="d.text" placeholder="Message">{{d.text}}
                 <input type="submit" class="span1 btn btn-primary" value="Send" ng-disabled="!text">
               </div>
             </form>

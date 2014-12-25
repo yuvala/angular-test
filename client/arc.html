@@ -32,7 +32,23 @@
                 .innerRadius(r-50)
                 .outerRadius(r)
                 .startAngle(0)
-                .endAngle(p-2);
+                .endAngle(p-3);
+                
+        var lineData = [ {"x":arc.centroid()[0],"y":arc.centroid()[1],}, 
+                        { "x": 200,  "y": 200}];
+          
+        //alert(arc.centroid());
+        var lineFunction = d3.svg.line()
+                         .x(function(d) { return d.x; })
+                         .y(function(d) { return d.y; })
+                         .interpolate("linear");
+
+        var path = canvas.append('path')
+                .attr("stroke", "blue")
+                .attr("fill", "none")
+                .attr("d", lineFunction(lineData));
+        
+        
         
         
         group.append('path')
